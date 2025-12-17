@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spanel — Admin Panel for Blockman Go</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --bg2: #111118;
+      --card: #151522;
+      --accent: #6cf2c2;
+      --accent2: #7a7aff;
+      --text: #eaeaea;
+      --muted: #9a9ab0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #14141d, var(--bg));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("https://grainy-gradients.vercel.app/noise.svg");
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .hero {
+      max-width: 900px;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--accent2);
+      color: var(--accent2);
+      font-size: 12px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      border-radius: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #000;
+    }
+
+    .btn-main:hover {
+      opacity: 0.85;
+    }
+
+    .btn-outline {
+      border: 1px solid #2b2b40;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+    }
+
+    section {
+      padding: 100px 8vw;
+      background: var(--bg2);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .title h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .title p {
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #24243a;
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent2);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 15px;
+    }
+
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .price-card {
+      background: var(--card);
+      border: 1px solid #24243a;
+      border-radius: 22px;
+      padding: 34px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .price-card.vip {
+      border-color: var(--accent);
+      box-shadow: 0 0 40px rgba(108, 242, 194, 0.15);
+    }
+
+    .price {
+      font-size: 42px;
+      margin: 20px 0;
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: #08080d;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="badge">ADMIN PANEL • BLOCKMAN GO</div>
+    <h1>Spanel<br><span>Control the Game.</span></h1>
+    <p>
+      A premium Admin Panel for Blockman Go.<br>
+      Power, bypass, and full dominance over the server.
+    </p>
+    <div class="buttons">
+      <a href="#features" class="btn btn-main">View Features</a>
+      <a href="#pricing" class="btn btn-outline">Get Access</a>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="title">
+    <h2>Features</h2>
+    <p>Built for admins who want absolute control.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Advanced Admin Panel</h3>
+      <p>Real-time actions, instant execution and clean UI.</p>
+    </div>
+    <div class="card">
+      <h3>Game Bypass</h3>
+      <p>Supports BedWars, SkyBlock and multiple BG modes.</p>
+    </div>
+    <div class="card">
+      <h3>VIP & Permissions</h3>
+      <p>Custom ranks, VIP access and permission control.</p>
+    </div>
+    <div class="card">
+      <h3>Secure & Undetected</h3>
+      <p>Optimized for stability and low detection risk.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="title">
+    <h2>Plans</h2>
+    <p>Choose your level of power.</p>
+  </div>
+
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Standard</h3>
+      <div class="price">$15</div>
+      <p>Basic panel access</p>
+    </div>
+
+    <div class="price-card vip">
+      <h3>VIP</h3>
+      <div class="price">$30</div>
+      <p>Full panel + bypass + updates</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Spanel • Admin Panel for Blockman Go
+</footer>
+
+</body>
+</html>
